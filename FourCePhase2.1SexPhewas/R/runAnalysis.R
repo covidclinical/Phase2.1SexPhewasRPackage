@@ -28,7 +28,7 @@ runAnalysis <- function( dir.data, dir.output, obfuscation ){
     
     
     #### Example plot 
-    p <- ggplot( data = summary, aes( x = age_group, y = COUNT, fill = sex ) ) +
+    p <- ggplot2::ggplot( data = summary, aes( x = age_group, y = COUNT, fill = sex ) ) +
       geom_bar( stat = "identity", position = position_dodge() ) + 
       labs( title = "Demographics", x="Age range", y = "Number of patients" ) +
       scale_fill_manual( values = c( 'darkblue','orange' ) ) +
