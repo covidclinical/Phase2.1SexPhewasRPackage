@@ -50,7 +50,7 @@ myPhewasAnalysis <- function( input, ageGroup = "ALL", caco, cases, control, cor
     print("Generating a PheWAS matrix ...")
   }
   subset$COUNT <- 1
-  phenotypedf <- as.data.frame(spread(subset, concept_code, COUNT, fill = 0))
+  phenotypedf <- as.data.frame(tidyr::spread(subset, concept_code, COUNT, fill = 0))
   
   phenotypedf$casecontrol <- as.character(ifelse( phenotypedf[caco]==cases, 1, 
                                                   ifelse( phenotypedf[caco] == control, 0, NA))
