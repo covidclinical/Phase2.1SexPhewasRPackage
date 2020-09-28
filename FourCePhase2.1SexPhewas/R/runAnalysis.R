@@ -29,10 +29,10 @@ runAnalysis <- function( dir.data, dir.output, obfuscation ){
     
     #### Example plot 
     p <- ggplot2::ggplot( data = summary, aes( x = age_group, y = COUNT, fill = sex ) ) +
-      geom_bar( stat = "identity", position = position_dodge() ) + 
-      labs( title = "Demographics", x="Age range", y = "Number of patients" ) +
-      scale_fill_manual( values = c( 'darkblue','orange' ) ) +
-      theme_classic()
+      ggplot2::geom_bar( stat = "identity", position = position_dodge() ) + 
+      ggplot2::labs( title = "Demographics", x="Age range", y = "Number of patients" ) +
+      ggplot2::scale_fill_manual( values = c( 'darkblue','orange' ) ) +
+      ggplot2::theme_classic()
     p
 
     ## Generate Sex PheWAS input 
